@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload Data - SupplyAI</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar-shell"></aside>
+    <main class="content">
+      <header class="topbar" id="topbar-shell"></header>
+
+<section class="grid-2">
+  <div class="upload-box">
+    <div class="toolbar"><h3>Upload product data</h3><a class="btn ghost" href="sample_template.csv" download>Template</a></div>
+    <div class="upload-drop">
+      <p class="eyebrow">CSV import</p>
+      <h2>Drop your inventory file or choose manually</h2>
+      <p class="muted">Required columns: product, stock, sold, last_sold_date, expiry_date, price</p>
+      <input type="file" id="fileInput" accept=".csv" />
+      <div class="progress"><span id="uploadProgress"></span></div>
+      <div class="section-space"><button id="uploadBtn">Upload & Analyze</button></div>
+      <div id="uploadMessage"></div>
+    </div>
+  </div>
+  <div class="panel">
+    <h3>Supported format</h3>
+    <div class="kpi-list">
+      <div class="kpi-row"><span>product</span><span class="badge info">Text</span></div>
+      <div class="kpi-row"><span>stock / sold / price</span><span class="badge info">Number</span></div>
+      <div class="kpi-row"><span>last_sold_date / expiry_date</span><span class="badge info">YYYY-MM-DD</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="table-wrap section-space">
+  <div class="toolbar"><h3>Upload history</h3><span class="badge success">Recent files</span></div>
+  <table>
+    <thead><tr><th>File</th><th>Imported Rows</th><th>Date</th></tr></thead>
+    <tbody id="uploadHistory"></tbody>
+  </table>
+</section>
+
+      <p class="footer-note">SupplyAI local demo • Smart inventory dashboard with animated glassmorphism UI</p>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+  <script src="js/upload.js"></script>
+</body>
+</html>

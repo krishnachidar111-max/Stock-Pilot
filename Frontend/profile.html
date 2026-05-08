@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile - SupplyAI</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar-shell"></aside>
+    <main class="content">
+      <header class="topbar" id="topbar-shell"></header>
+
+<section class="grid-2">
+  <div class="panel">
+    <div class="toolbar"><h3>Account profile</h3><span class="badge success">Secure</span></div>
+    <div class="kpi-row"><span>Name</span><strong data-user-name></strong></div>
+    <div class="kpi-row"><span>Email</span><strong data-user-email></strong></div>
+    <div class="kpi-row"><span>Avatar</span><img src="assets/images/avatar.svg" alt="Avatar" width="60" height="60" /></div>
+  </div>
+  <div class="form-card">
+    <div class="toolbar"><h3>Update profile</h3><span class="badge info">Local demo</span></div>
+    <form id="profileForm">
+      <div><label>New name</label><input id="profileName" placeholder="Update display name" /></div>
+      <div><label>New password</label><input id="profilePassword" type="password" placeholder="Leave blank to keep current password" /></div>
+      <button type="submit">Save changes</button>
+    </form>
+    <div id="profileMessage"></div>
+  </div>
+</section>
+
+      <p class="footer-note">SupplyAI local demo • Smart inventory dashboard with animated glassmorphism UI</p>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory - SupplyAI</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar-shell"></aside>
+    <main class="content">
+      <header class="topbar" id="topbar-shell"></header>
+
+<section class="table-wrap">
+  <div class="toolbar">
+    <div>
+      <h3>Inventory management</h3>
+      <p class="muted">Search, add, edit and delete products.</p>
+    </div>
+    <div class="filters">
+      <input id="searchInput" placeholder="Search products" />
+      <button class="btn secondary" id="openAddForm">Add Product</button>
+    </div>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Product</th><th>Category</th><th>Stock</th><th>Sold</th><th>Price</th><th>Expiry</th><th>Status</th><th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="inventoryTable"></tbody>
+  </table>
+</section>
+
+<section class="form-card section-space" id="productFormCard" style="display:none;">
+  <div class="toolbar"><h3 id="formTitle">Add Product</h3><button class="btn ghost" id="closeForm">Close</button></div>
+  <form id="productForm">
+    <input type="hidden" id="productId" />
+    <div class="grid-2">
+      <div><label>Product</label><input id="product" required /></div>
+      <div><label>Category</label><input id="category" value="General" /></div>
+      <div><label>Stock</label><input id="stock" type="number" required /></div>
+      <div><label>Sold</label><input id="sold" type="number" required /></div>
+      <div><label>Price</label><input id="price" type="number" required /></div>
+      <div><label>Last sold date</label><input id="lastSoldDate" type="date" required /></div>
+      <div><label>Expiry date</label><input id="expiryDate" type="date" required /></div>
+    </div>
+    <button type="submit">Save Product</button>
+  </form>
+  <div id="inventoryMessage"></div>
+</section>
+
+      <p class="footer-note">SupplyAI local demo • Smart inventory dashboard with animated glassmorphism UI</p>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+  <script src="js/inventory.js"></script>
+</body>
+</html>

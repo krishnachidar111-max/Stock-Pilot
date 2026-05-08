@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reports - SupplyAI</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar-shell"></aside>
+    <main class="content">
+      <header class="topbar" id="topbar-shell"></header>
+
+<section class="grid-3">
+  <div class="report-card"><div class="stat-label">Total Products</div><div class="stat-value" id="rProducts">0</div></div>
+  <div class="report-card"><div class="stat-label">Total Revenue</div><div class="stat-value" id="rRevenue">₹0</div></div>
+  <div class="report-card"><div class="stat-label">Inventory Health Score</div><div class="stat-value" id="rHealth">0</div></div>
+</section>
+
+<section class="grid-2 section-space">
+  <div class="panel">
+    <div class="toolbar"><h3>Top selling products</h3><button id="downloadReport" class="btn secondary">Download JSON Report</button></div>
+    <div id="topSelling"></div>
+  </div>
+  <div class="panel">
+    <div class="toolbar"><h3>Average pricing</h3><span class="badge info" id="avgPrice">₹0</span></div>
+    <p class="muted">Use this report to present inventory performance in your hackathon demo.</p>
+  </div>
+</section>
+
+      <p class="footer-note">SupplyAI local demo • Smart inventory dashboard with animated glassmorphism UI</p>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+  <script src="js/reports.js"></script>
+</body>
+</html>

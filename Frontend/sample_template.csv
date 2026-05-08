@@ -1,0 +1,5 @@
+product,category,stock,sold,last_sold_date,expiry_date,price
+Rice,Grocery,100,35,2026-04-18,2026-07-10,45
+Milk,Dairy,20,50,2026-04-19,2026-04-25,30
+Soap,Personal Care,200,60,2026-04-17,2027-01-10,25
+Biscuits,Snacks,12,40,2026-04-19,2026-06-01,20
